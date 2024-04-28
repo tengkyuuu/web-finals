@@ -1,3 +1,5 @@
+const { createClient } = require('@supabase/supabase-js');
+
 const supabaseUrl = 'YOUR_SUPABASE_URL';
 const supabaseKey = 'YOUR_SUPABASE_PUBLIC_KEY';
 
@@ -14,7 +16,7 @@ loginForm.addEventListener('submit', async (e) => {
     try {
         const { user, error } = await supabase.auth.signIn({
             email,
-            password
+            password,
         });
 
         if (error) {
