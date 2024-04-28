@@ -1,68 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
- 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="C:\Users\Dell\Documents\Web Finals\style.css">
-    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
-    html,
-    body {
-        height: 100%;
-    }
-
-    body {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        .form {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            max-width: 720px;
+            width: 100%;
+            background: #fff;
+            border: 2px solid #fff;
+            transform: translate(-50%, -50%);
+        }
+        .form .form-box {
+            display: flex;
+        }
+        .form-box .form-details {
+            max-width: 330px;
+        }
+        .form-box .form-content {
+            width: 100%;
+            padding: 35px;
+        }
+        .form-details img {
+            width: 150px;
+        }
+        
     </style>
 </head>
-
 <body>
-    <!-- ============================================================== -->
-    <!-- login page  -->
-    <!-- ============================================================== -->
-    <div class="splash-container">
-        <div class="card ">
-            <div class="card-header text-center"><a href="index.html"><img class="logo-img" src="assets/images/logo.png" alt="logo"></a></div>
-            <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control form-control-lg" id="password" type="password" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <label class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember Me</span>
-                        </label>
-                    </div>
-                    <a href="admin/index.html" class="btn btn-lg btn-block" style="background-color:rgb(235, 151, 42) !important;
-                    color: rgb(243, 245, 238) !important;">Sign in as Admin</a>
-                    <a href="user/index.html" class="btn btn-lg btn-block" style="background-color:rgb(235, 151, 42) !important;
-                    color: rgb(243, 245, 238) !important;">Sign in as Student</a>
+    <div class="form">
+        <div class="form-box">
+            <div class="form-details">
+                <img src="images/loginimg.png">
+            </div>
+            <div class="form-content">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <input type="text" id="email" placeholder="Email" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
                 </form>
+                <a href="#">Forgot password?</a>
+                <p>Don't have an account? <a href="#">Signup</a></p>
             </div>
         </div>
     </div>
-  
-    <!-- ============================================================== -->
-    <!-- end login page  -->
-    <!-- ============================================================== -->
-    <!-- Optional JavaScript -->
-    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="login.js"></script>
 </body>
- 
 </html>
