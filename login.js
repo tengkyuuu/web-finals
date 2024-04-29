@@ -1,7 +1,7 @@
-const { createClient } = require('@supabase/supabase-js');
+import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = 'YOUR_SUPABASE_URL';
-const supabaseKey = 'YOUR_SUPABASE_PUBLIC_KEY';
+const supabaseUrl = 'https://owhrqupqblowmdvwlqfv.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im93aHJxdXBxYmxvd21kdndscWZ2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQxODYxNDUsImV4cCI6MjAyOTc2MjE0NX0.1_p-OFxiu0DhqDw98MJQ-ZWUNxJqP10ifN7fOrBqXyk';
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -21,13 +21,11 @@ loginForm.addEventListener('submit', async (e) => {
 
         if (error) {
             console.error(error.message);
-            // Handle error (e.g., display error message to the user)
         } else {
             console.log('User logged in successfully:', user);
-            // Redirect user to dashboard or another page
+            
         }
     } catch (error) {
         console.error('Error occurred:', error.message);
-        // Handle error (e.g., display error message to the user)
     }
 });
